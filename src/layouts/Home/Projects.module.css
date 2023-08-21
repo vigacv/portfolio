@@ -1,0 +1,87 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.projectsContainer {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    overflow-x: auto;
+
+    cursor: grab;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.projectsContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 3vw;
+    padding-right: 2.8vw;
+
+    @media (--mediaMobile) {
+        padding-right: 0;
+    }
+}
+
+@keyframes introMobileScrollIndicator {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.mobileScrollIndicator {
+    position: fixed;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    opacity: 0;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.8, 0.1, 0.27, 1);
+    transition-duration: var(--durationM);
+    padding: 20px;
+
+    @media (--mediaUseMotion) {
+        animation-name: introMobileScrollIndicator;
+        transition-property: opacity, transform;
+        transform: translate3d(0, 20px, 0);
+    }
+
+    &[data-status='entered'] {
+        opacity: 1;
+    }
+
+    &[data-hidden='true'] {
+        opacity: 0;
+        transform: none;
+    }
+
+    & svg {
+        stroke: rgb(var(--rgbText) / 0.5);
+    }
+
+    &:focus-visible {
+        opacity: 1;
+    }
+}
