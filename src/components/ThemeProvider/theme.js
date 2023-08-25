@@ -111,8 +111,8 @@ const dark = {
   themeId: 'dark',
   rgbBackground: '17 17 17',
   rgbBackgroundLight: '26 26 26',
-  rgbPrimary: '0 229 255',
-  rgbAccent: '0 229 255',
+  rgbPrimary: '255 82 82', // Reddish primary color
+  rgbAccent: '255 82 82', // Reddish accent color
   rgbText: '255 255 255',
   rgbError: '255 55 102',
   colorTextTitle: 'rgb(var(--rgbText) / 1)',
@@ -124,14 +124,15 @@ const light = {
   themeId: 'light',
   rgbBackground: '242 242 242',
   rgbBackgroundLight: '255 255 255',
-  rgbPrimary: '0 0 0',
-  rgbAccent: '0 229 255',
-  rgbText: '0 0 0',
+  rgbPrimary: '128 0 0', // Dark red primary color
+  rgbAccent: '255 82 82', // Reddish accent color
+  rgbText: '0 0 0', // Black text color
   rgbError: '255 0 60',
   colorTextTitle: 'rgb(var(--rgbText) / 1)',
   colorTextBody: 'rgb(var(--rgbText) / 0.8)',
   colorTextLight: 'rgb(var(--rgbText) / 0.6)',
 };
+
 
 export const tokens = {
   base: baseTokens,
