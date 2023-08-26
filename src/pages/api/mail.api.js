@@ -6,7 +6,7 @@ const handler = async (req, res) => {
             case "POST": {
                 const { email, message } = req.body;
 
-                if (!email || !message) res.status(400).json({ message: "Email and message parameters are required" })
+                if (!email || !message) res.status(400).json({ message: "Email and message parameters are required" });
 
                 //Do some thing
                 const finalMessage =

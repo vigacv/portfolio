@@ -4,7 +4,6 @@ import { Footer } from 'components/Footer';
 import { Link } from 'components/Link';
 import { List, ListItem } from 'components/List';
 import { Meta } from 'components/Meta';
-import { Table, TableBody, TableCell, TableHeadCell, TableRow } from 'components/Table';
 import {
   ProjectBackground,
   ProjectContainer,
@@ -115,7 +114,7 @@ export const Uses = () => {
                     <Link href="https://cloud.google.com/">GCP</Link> and <Link href="https://www.oracle.com/cloud/">Oracle Cloud</Link>
                   </ListItem>
                   <ListItem>
-                    Lately I've been using <Link href="https://supabase.com/">Supabase</Link> for authentication and storage and I really like it :).
+                    Lately I&apos;ve been using <Link href="https://supabase.com/">Supabase</Link> for authentication and storage and I really like it :).
                   </ListItem>
                 </List>
               </ProjectSectionText>

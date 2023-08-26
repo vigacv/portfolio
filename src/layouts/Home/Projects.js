@@ -1,15 +1,8 @@
-import React, { useRef, useState, useEffect } from 'react'
-import { ProjectSummary } from './ProjectSummary'
+import React, { useRef, useState, useEffect } from 'react';
+import { ProjectSummary } from './ProjectSummary';
 
-import gamestackTexture2Large from 'assets/gamestack-list-large.jpg';
 import gamestackTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from 'assets/gamestack-list.jpg';
-import gamestackTextureLarge from 'assets/gamestack-login-large.jpg';
 import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from 'assets/gamestack-login.jpg';
-import sliceTextureLarge from 'assets/slice-app-large.jpg';
-import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
-import sliceTexture from 'assets/slice-app.jpg';
 import twrTextureLarge from 'assets/twitter-clone-dark-large.jpg';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 import twrTexture from 'assets/twitter-clone-dark.jpg';
@@ -19,72 +12,71 @@ import ArrowRight from 'assets/arrow-right.svg';
 
 import styles from './Projects.module.css';
 
-const projects = [
-    {
-        id: "project-1",
-        title: "Twitter Clone",
-        description: "A twitter clone made using NextJS 13 with App Router and Supabase.",
-        buttonText: "View website",
-        buttonLink: "https://twitter-clone-seven-ivory.vercel.app/",
-        model: {
-            type: 'laptop',
-            alt: 'Twitter Clone',
-            textures: [
-                {
-                    srcSet: [twrTexture, twrTextureLarge],
-                    placeholder: sprTexturePlaceholder,
-                },
-            ],
-        }
-    },
-    {
-        id: "project-2",
-        title: "Coming soon",
-        description: "Next project will be here",
-        buttonText: "View website",
-        buttonLink: "/",
-        model: {
-            type: 'phone',
-            alt: 'App login screen',
-            textures: [
-                {
-                    srcSet: ['', ''],
-                    placeholder: gamestackTexturePlaceholder,
-                },
-                {
-                    srcSet: ['', ''],
-                    placeholder: gamestackTexture2Placeholder,
-                },
-            ],
-        }
-    },
-    // {
-    //     id: "project-3",
-    //     title: "Biomedical image collaboration",
-    //     description: "Increasing the amount of collaboration in Slice, an app for biomedical imaging",
-    //     buttonText: "View project",
-    //     buttonLink: "/projects/slice",
-    //     model: {
-    //         type: 'laptop',
-    //         alt: 'Annotating a biomedical image in the Slice app',
-    //         textures: [
-    //             {
-    //                 srcSet: [sliceTexture, sliceTextureLarge],
-    //                 placeholder: sliceTexturePlaceholder,
-    //             },
-    //         ],
-    //     }
-    // }
-]
-
 const Projects = ({ id }) => {
     const [visibleSections, setVisibleSections] = useState([]);
-    projects.forEach(proj => proj.ref = useRef())
+
+    const projects = [
+        {
+            id: "project-1",
+            title: "Twitter Clone",
+            description: "A twitter clone made using NextJS 13 with App Router and Supabase.",
+            buttonText: "View website",
+            buttonLink: "https://twitter-clone-seven-ivory.vercel.app/",
+            model: {
+                type: 'laptop',
+                alt: 'Twitter Clone',
+                textures: [
+                    {
+                        srcSet: [twrTexture, twrTextureLarge],
+                        placeholder: sprTexturePlaceholder,
+                    },
+                ],
+            },
+            ref: useRef()
+        },
+        {
+            id: "project-2",
+            title: "Coming soon",
+            description: "Next project will be here",
+            buttonText: "View website",
+            buttonLink: "/",
+            model: {
+                type: 'phone',
+                alt: 'App login screen',
+                textures: [
+                    {
+                        srcSet: [gamestackTexturePlaceholder, gamestackTexturePlaceholder],
+                        placeholder: gamestackTexturePlaceholder,
+                    },
+                    {
+                        srcSet: [gamestackTexturePlaceholder, gamestackTexturePlaceholder],
+                        placeholder: gamestackTexturePlaceholder,
+                    },
+                ],
+            },
+            ref: useRef()
+        },
+        // {
+        //     id: "project-3",
+        //     title: "Biomedical image collaboration",
+        //     description: "Increasing the amount of collaboration in Slice, an app for biomedical imaging",
+        //     buttonText: "View project",
+        //     buttonLink: "/projects/slice",
+        //     model: {
+        //         type: 'laptop',
+        //         alt: 'Annotating a biomedical image in the Slice app',
+        //         textures: [
+        //             {
+        //                 srcSet: [sliceTexture, sliceTextureLarge],
+        //                 placeholder: sliceTexturePlaceholder,
+        //             },
+        //         ],
+        //     },
+        //     ref: useRef()
+        // }
+    ];
 
     const containerRef = useRef();
-
-    // useEffect(() => {
-    // }, [])
 
     useEffect(() => {
         const sections = projects.map(proj => proj.ref);
@@ -114,7 +106,7 @@ const Projects = ({ id }) => {
 
     let startx = 0;
     let diffx = 0;
-    let drag = false
+    let drag = false;
 
     function handleMouseDown(e) {
         const el = containerRef.current;
@@ -162,12 +154,12 @@ const Projects = ({ id }) => {
         const intId = setInterval(function () {
             const firstElementRect = containerRef.current.firstElementChild.getBoundingClientRect();
             if (firstElementRect.right <= 0) {
-                console.log("clearing"); clearInterval(intId)
+                clearInterval(intId);
             }
             containerRef.current.scrollBy(x, 0);
             x = x + 1; //if you want to increase speed simply increase increment interval
         }, y);
-    }
+    };
 
     return (
         <div
@@ -204,7 +196,7 @@ const Projects = ({ id }) => {
             </span>
 
         </div>
-    )
-}
+    );
+};
 
-export default Projects
+export default Projects;

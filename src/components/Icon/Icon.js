@@ -15,7 +15,7 @@ import Pause from './svg/pause.svg';
 import Play from './svg/play.svg';
 import Send from './svg/send.svg';
 import Twitter from './svg/twitter.svg';
-import Linkedin from './svg/linkedin.svg'
+import Linkedin from './svg/linkedin.svg';
 
 export const icons = {
   arrowLeft: ArrowLeft,

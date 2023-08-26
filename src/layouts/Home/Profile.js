@@ -21,17 +21,17 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      Hello, I'm Gabriel! A passionate software developer based in Lima, I thrive on crafting
+      Hello, I&apos;m Gabriel! A passionate software developer based in Lima, I thrive on crafting
       innovative digital solutions. With a degree in Systems Engineering and a flair for full
-      stack development, I'm dedicated to bringing ideas to life across various platforms.
-      If you're interested, you can find the all the technologies I use in my{' '}
+      stack development, I&apos;m dedicated to bringing ideas to life across various platforms.
+      If you&apos;re interested, you can find the all the technologies I use in my{' '}
       <Link href="/technologies">technologies</Link> page.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my downtime, you'll find me immersed in the world of video games and anime,
+      In my downtime, you&apos;ll find me immersed in the world of video games and anime,
       channeling my energy into calisthenics, and constantly honing my skills by
-      undertaking new projects and mastering emerging technologies. I'm always
-      excited to explore new collaborations, so don't hesitate to get in touch.
+      undertaking new projects and mastering emerging technologies. I&apos;m always
+      excited to explore new collaborations, so don&apos;t hesitate to get in touch.
     </Text>
   </Fragment>
 );
