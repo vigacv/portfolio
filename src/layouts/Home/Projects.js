@@ -39,42 +39,42 @@ const projects = [
     },
     {
         id: "project-2",
-        title: "Video game progress tracking",
-        description: "Design and development for a video game tracking app built in React Native",
+        title: "Coming soon",
+        description: "Next project will be here",
         buttonText: "View website",
-        buttonLink: "https://gamestack.hamishw.com",
+        buttonLink: "/",
         model: {
             type: 'phone',
             alt: 'App login screen',
             textures: [
                 {
-                    srcSet: [gamestackTexture, gamestackTextureLarge],
+                    srcSet: ['', ''],
                     placeholder: gamestackTexturePlaceholder,
                 },
                 {
-                    srcSet: [gamestackTexture2, gamestackTexture2Large],
+                    srcSet: ['', ''],
                     placeholder: gamestackTexture2Placeholder,
                 },
             ],
         }
     },
-    {
-        id: "project-3",
-        title: "Biomedical image collaboration",
-        description: "Increasing the amount of collaboration in Slice, an app for biomedical imaging",
-        buttonText: "View project",
-        buttonLink: "/projects/slice",
-        model: {
-            type: 'laptop',
-            alt: 'Annotating a biomedical image in the Slice app',
-            textures: [
-                {
-                    srcSet: [sliceTexture, sliceTextureLarge],
-                    placeholder: sliceTexturePlaceholder,
-                },
-            ],
-        }
-    }
+    // {
+    //     id: "project-3",
+    //     title: "Biomedical image collaboration",
+    //     description: "Increasing the amount of collaboration in Slice, an app for biomedical imaging",
+    //     buttonText: "View project",
+    //     buttonLink: "/projects/slice",
+    //     model: {
+    //         type: 'laptop',
+    //         alt: 'Annotating a biomedical image in the Slice app',
+    //         textures: [
+    //             {
+    //                 srcSet: [sliceTexture, sliceTextureLarge],
+    //                 placeholder: sliceTexturePlaceholder,
+    //             },
+    //         ],
+    //     }
+    // }
 ]
 
 const Projects = ({ id }) => {
