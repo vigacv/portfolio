@@ -10,6 +10,13 @@
   justify-content: center;
   flex-shrink: 0;
 
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
+
   @media (--mediaDesktop) {
     margin: var(--space2XL) 0;
   }
