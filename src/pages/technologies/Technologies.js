@@ -73,7 +73,7 @@ export const Uses = () => {
                   </ListItem>
                 </List>
               </ProjectSectionText>
-            </ProjectTextRow>https://www.microsoft.com/en-US/sql-server/
+            </ProjectTextRow>
           </ProjectSectionContent>
         </ProjectSection>
 
