@@ -104,7 +104,7 @@ export const Uses = () => {
               <ProjectSectionText as="div">
                 <List>
                   <ListItem>
-                    I am experienced with <Link href="https://azure.microsoft.com/">CosmosDB</Link>Azure,{' '}
+                    I am experienced with <Link href="https://azure.microsoft.com/">Azure</Link>,{' '}
                     holding two certificates at the moment:{' '}
                     <Link href="https://learn.microsoft.com/api/credentials/share/en-us/GabrielCarmeloVillaverde-0283/8AD86987FAD75531?sharingId=F07CAA10A23145C4">Azure Fundamentals</Link> and{' '}
                     <Link href="https://learn.microsoft.com/api/credentials/share/en-us/GabrielCarmeloVillaverde-0283/1C00A884BEF5C52?sharingId=F07CAA10A23145C4">Azure Administrator Associate</Link>.
