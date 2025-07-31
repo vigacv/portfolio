@@ -18,6 +18,10 @@
   background-clip: text;
 }
 
+.header h1+nav {
+  display: none;
+}
+
 .header nav ul {
   display: flex;
   flex-direction: column;
@@ -30,6 +34,7 @@
 
 .header nav li {
   padding: 0.75rem 1rem;
+  align-content: center;
 }
 
 
@@ -38,6 +43,27 @@
   color: #374151;
   font-weight: 500;
   transition: color 0.2s;
+}
+
+.drawer nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+}
+
+.drawer nav li {
+  padding: 0;
+  flex-grow: 1;
+  min-height: 2.5rem;
+  display: flex;
+}
+
+.drawer nav a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .header nav a:hover {
@@ -87,7 +113,7 @@
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: #fff; 
+  background-color: #fff;
   overflow-x: hidden;
   transition: width 0.3s;
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
@@ -112,4 +138,27 @@
   font-size: 2rem;
   cursor: pointer;
   margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+  .menuButton {
+    display: none;
+  }
+
+  .drawer {
+    display: none;
+  }
+
+  .drawerOverlay {
+    display: none;
+  }
+
+  .header h1+nav {
+    display: block;
+  }
+
+  .header nav ul {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
 }
