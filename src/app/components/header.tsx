@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
-import styles from './header.module.css'
+import styles from './header.module.css';
+import { Button } from '@/components/ui';
 
 export default function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -18,10 +19,7 @@ export default function Header() {
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-
-      <button className={`${styles.menuButton} ${styles.button}`} onClick={() => setDrawerOpen(true)}>
-        <span className="material-symbols-outlined">menu</span>
-      </button>
+      <Button className={styles.menuButton} iconName='menu' onClick={() => setDrawerOpen(true)} aria-label='Open Menu' />
       <div
         className={`${styles.drawerOverlay} ${drawerOpen ? styles.drawerOverlayVisible : styles.drawerOverlayHidden}`}
         onClick={() => setDrawerOpen(false)}
@@ -34,13 +32,7 @@ export default function Header() {
           onClick={e => e.stopPropagation()}
         >
           <div className={styles.drawerContent}>
-            <button
-              className={`${styles.button} ${styles.closeButton}`}
-              onClick={() => setDrawerOpen(false)}
-              aria-label="Close menu"
-            >
-              <span className="material-symbols-outlined">close</span>
-            </button>
+            <Button className={styles.closeButton} iconName='close' onClick={() => setDrawerOpen(false)} aria-label='Close Menu' />
             <nav aria-label='Main Navigation'>
               <ul>
                 <li><a href="#">About</a></li>

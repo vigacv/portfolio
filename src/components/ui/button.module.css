@@ -1,0 +1,16 @@
+.button {
+  background: transparent;
+  border: 1px solid var(--cyan-dark);
+  border-radius: 6px;
+  color: var(--cyan-dark);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  color: white;
+  background: var(--cyan-dark);
+}
