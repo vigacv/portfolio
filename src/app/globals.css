@@ -4,14 +4,14 @@
   --cyan-dark: #0891b2;
   --cyan-light: #22d3ee;
   --purple-vibrant: #a855f7;
+  --primary: var(--cyan-dark);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+.dark {
+  --background: #010203;
+  --foreground: #d1d5db;
+  --primary: var(--cyan-light);
+}
 
 html,
 body {
@@ -37,9 +37,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-} */

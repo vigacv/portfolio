@@ -5,7 +5,7 @@
   grid-template-columns: 1fr auto;
   align-items: center;
   padding: 1.5rem;
-  border-bottom: 1px solid color-mix(in srgb, var(--cyan-dark), transparent 80%);
+  border-bottom: 1px solid color-mix(in srgb, var(--primary), transparent 80%);
 }
 
 /* Title */
@@ -42,13 +42,19 @@
 
 .header nav a {
   text-decoration: none;
-  color: #374151;
+  color: var(--foreground);
   font-weight: 500;
   transition: color 0.2s;
 }
 
 .header nav a:hover {
-  color: var(--cyan-dark, #383838);
+  color: var(--primary, #383838);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 
 /* Drawer overlay */
@@ -75,10 +81,14 @@
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: #fff;
+  background-color: var(--background);
   overflow-x: hidden;
   transition: width 0.3s;
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.darkDrawer {
+  border-left: 1px solid var(--primary);
 }
 
 .drawerOpen {
@@ -126,9 +136,12 @@
 }
 
 /* Responsive styles */
-@media (min-width: 768px) {
+@media (min-width: 820px) {
+  .header {
+    grid-template-columns: 1fr auto 60px;
+  }
   .menuButton {
-    display: none;
+    display: none !important;
   }
   .drawer {
     display: none;
