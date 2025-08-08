@@ -8,7 +8,6 @@ export default function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
-  console.log("Header component rendered");
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>&lt;GC/&gt;</h1>

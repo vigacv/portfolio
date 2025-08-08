@@ -1,4 +1,5 @@
 import styles from './button.module.css';
+import Icon from './icon';
 
 type ButtonProps = {
   onClick?: () => void;
@@ -17,7 +18,7 @@ export default function Button({
       onClick={onClick}
       {...props}
     >
-      <span className="material-symbols-outlined">{iconName}</span>
+      <Icon iconName={iconName} />
     </button>
   );
 
