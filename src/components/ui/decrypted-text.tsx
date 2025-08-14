@@ -4,14 +4,14 @@ import { useEffect, useRef, useState } from "react";
 
 type DecryptedTextProps = {
     text: string;
-};
+} & React.HTMLAttributes<HTMLSpanElement>;
 
 const scrambleChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+';
 const scrambleFrequency = 5000; // 3 seconds
-const maxIterations = 5; // Maximum number of iterations for scrambling
-const timeBetweenIterations = 50; // Time in ms between each scramble iteration
+const totalIterations = 30; // Maximum number of iterations for scrambling
+const timeBetweenIterations = 40; // Time in ms between each scramble iteration
 
-export default function DecryptedText({ text }: DecryptedTextProps) {
+export default function DecryptedText({ text, className }: DecryptedTextProps) {
     const [prefersReducedMotion, setPrefersReducedMotion] = useState(true);
     const [displayText, setDisplayText] = useState(text);
 
@@ -35,6 +35,7 @@ export default function DecryptedText({ text }: DecryptedTextProps) {
     function triggerScrambleAnimation() {
         let iterationCount = 0;
         let revealIndex = 0;
+        const maxIterations = totalIterations / text.length;
         innerIntervalRef.current = setInterval(() => {
             if (revealIndex >= text.length) {
                 clearInnerInterval();
@@ -44,9 +45,6 @@ export default function DecryptedText({ text }: DecryptedTextProps) {
             if (iterationCount >= maxIterations) {
                 revealIndex++;
                 iterationCount = 0;
-                // clearInnerInterval();
-                // setDisplayText(text);
-                // return;
             }
             setDisplayText(scrambleText(text, revealIndex));
             iterationCount++;
@@ -82,6 +80,13 @@ export default function DecryptedText({ text }: DecryptedTextProps) {
     }, [text, prefersReducedMotion]);
 
     return (
-        <>{displayText}</>
+        <>
+            <span className={className} aria-hidden="true">
+                {displayText}
+            </span>
+            <span className="sr-only" aria-live="polite" aria-atomic="true">
+                {text}
+            </span>
+        </>
     )
 }

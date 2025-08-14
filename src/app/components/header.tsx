@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <h1 className={styles.title}>&lt;GC/&gt;</h1>
+      <h1 className={styles.title} role='img' aria-label='Gabriel Carmelo'>&lt;GC/&gt;</h1>
 
       <nav aria-label='Main Navigation'>
         <ul>
