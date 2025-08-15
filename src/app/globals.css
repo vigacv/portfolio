@@ -1,15 +1,20 @@
 :root {
   --background: #ffffff;
+  --background-alt: #f9fafb;
   --foreground: #171717;
   --cyan-dark: #0891b2;
   --cyan-light: #22d3ee;
   --purple-vibrant: #a855f7;
   --neon-pink: #ec4899;
   --primary: var(--cyan-dark);
+  --secondary: var(--purple-vibrant);
+
+  --header-height: 90px;
 }
 
 .dark {
   --background: #010203;
+  --background-alt: #11182780;
   --foreground: #d1d5db;
   --primary: var(--cyan-light);
 }

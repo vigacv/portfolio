@@ -1,0 +1,112 @@
+/* About.module.css */
+
+/* Outer section: vertical padding */
+.section {
+  padding: 5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* center everything horizontally */
+  background-color: var(--background-alt);
+}
+
+/* Title centered */
+.title {
+  margin: 0 0 2rem;
+  text-align: center;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  background: linear-gradient(to right, var(--cyan-light), var(--purple-vibrant));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Content wrapper - keeps content centered with a max width */
+.content {
+  width: 100%;
+  max-width: 960px;
+  /* won't grow beyond this on desktop */
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  /* vertically center items within each row */
+  justify-items: center;
+  /* center items horizontally in their grid cells */
+  grid-template-columns: 1fr;
+  /* default: single column (mobile) */
+  box-sizing: border-box;
+  margin: 0 auto;
+  /* center the whole block */
+}
+
+/* Text column */
+.text {
+  /* let the text take full width of the column but not stretch too wide */
+  width: 100%;
+  max-width: 640px;
+  text-align: left;
+  line-height: 1.6;
+  color: inherit;
+}
+
+.chipsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Image placeholder */
+.image {
+  object-fit: cover;
+  border: 1px solid var(--primary);
+  animation: shadowPulse 3s infinite ease-in-out;
+}
+
+/* Desktop: two columns, centered and constrained */
+@media (min-width: 820px) {
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .content {
+    grid-template-columns: 1fr 320px;
+    /* text column + fixed image column */
+    column-gap: 40px;
+  }
+
+  .text {
+    text-align: left;
+  }
+}
+
+/* Larger screens: give the text some breathing room */
+@media (min-width: 1100px) {
+  .content {
+    max-width: 1100px;
+    grid-template-columns: 1fr 360px;
+  }
+
+  .image {
+    width: 360px;
+    height: 360px;
+  }
+}
+
+@keyframes shadowPulse {
+
+  0%,
+  100% {
+    box-shadow:
+      -20px -20px 0 var(--secondary),
+      -20px -20px 0 10px color-mix(in srgb, var(--primary), transparent 50%);
+  }
+
+  50% {
+    box-shadow:
+      -20px -20px 0 color-mix(in srgb, var(--secondary), transparent 50%),
+      -20px -20px 0 10px color-mix(in srgb, var(--primary), transparent 80%);
+  }
+}
