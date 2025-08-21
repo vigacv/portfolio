@@ -11,19 +11,9 @@ export default function About() {
       <div className={styles.content}>
         <div className={styles.text}>
           <p>
-            I'm a results-oriented Software Engineer with a proven track record of
-            delivering highly performant, scalable solutions. I have strong expertise in
-            data structures, algorithms, optimization, and design patterns, and I'm
-            experienced in building distributed systems and microservices that run
-            reliably at scale. AWS and Azure certified, I leverage cloud-native
-            architectures to create solutions that are both efficient and adaptable.
-          </p>
-
-          <p>
-            Throughout my career, I've thrived in complex, fast-changing environments,
-            collaborating effectively with diverse stakeholders to translate business
-            needs into technical results. My focus is on building systems that are robust
-            today and ready for the challenges of tomorrow.
+            I&apos;m a Software Engineer passionate about building scalable, high-performance systems.
+            With expertise in algorithms, data structures, and distributed architectures, I design cloud-native solutions on AWS and Azure that are reliable, efficient, and adaptable.
+            I enjoy tackling complex challenges and turning them into clean, optimized solutions.
           </p>
           <div className={styles.chipsContainer}>
             <Chip label="Full Stack Developer" />
@@ -38,6 +28,7 @@ export default function About() {
           width={320}
           height={320}
           className={styles.image}
+          priority={true}
         />
       </div>
     </section>
