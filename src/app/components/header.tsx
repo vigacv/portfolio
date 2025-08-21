@@ -15,8 +15,7 @@ export default function Header() {
       <nav aria-label='Main Navigation'>
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Skills</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#">Experience</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
@@ -47,8 +46,7 @@ export default function Header() {
             <nav aria-label='Main Navigation'>
               <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Skills</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#">Experience</a></li>
                 <li><a href="#">Contact</a></li>
               </ul>
