@@ -54,3 +54,13 @@ a {
   clip: rect(0, 0, 0, 0);
   border: 0
 }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: color-mix(in srgb, var(--foreground), transparent 40%);
+  font-size: 0.875rem;
+}

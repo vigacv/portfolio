@@ -12,6 +12,7 @@ export default function Home() {
         <Skills />
       </main>
       <footer className={styles.footer}>
+        <p>© {new Date().getFullYear()} Gabriel Carmelo. Coded with ♥ in the digital realm.</p>
       </footer>
     </div>
   );
