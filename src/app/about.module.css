@@ -1,15 +1,3 @@
-/* About.module.css */
-
-/* Outer section: vertical padding */
-.section {
-  padding: 5rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* center everything horizontally */
-  background-color: var(--background-alt);
-}
-
 /* Title centered */
 .title {
   margin: 0 0 2rem;
