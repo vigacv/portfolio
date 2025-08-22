@@ -63,8 +63,8 @@ const skills = [
 
 export default function Skills() {
     return (
-        <section id="skills" className={styles.section}>
-            <h1 className={styles.title}>Skills</h1>
+        <section id="skills">
+            <h1 className="section-title">Skills</h1>
             <div className={styles.skillsContainer}>
                 {skills.map(skill => (
                     <div key={skill.name} className={styles.skillCard}>

@@ -4,11 +4,13 @@ import Icon from './icon';
 type ButtonProps = {
   onClick?: () => void;
   iconName: string;
+  text?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export default function Button({
   onClick,
   iconName,
+  text,
   className,
   ...props
 }: ButtonProps) {
@@ -18,7 +20,7 @@ export default function Button({
       onClick={onClick}
       {...props}
     >
-      <Icon iconName={iconName} />
+      <Icon iconName={iconName} /> {text}
     </button>
   );
 

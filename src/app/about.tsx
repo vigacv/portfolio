@@ -6,8 +6,7 @@ import Image from "next/image";
 export default function About() {
   return (
     <section id="about" className={styles.section}>
-      <h1 className={styles.title}>About</h1>
-
+      <h1 className="section-title">About</h1>
       <div className={styles.content}>
         <div className={styles.text}>
           <p>
