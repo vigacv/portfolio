@@ -8,7 +8,7 @@ export default function Connect() {
       <h1 className="section-title">Connect</h1>
       <div className={styles.text}>
         <p >
-          Ready to collaborate or have questions? Let's connect and create something amazing together!
+          Ready to collaborate or have questions? Let&apos;s connect and create something amazing together!
         </p>
       </div>
       <div className={styles.buttons}>
