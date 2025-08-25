@@ -1,7 +1,7 @@
 'use client';
 import { DecryptedText, Icon } from "@/components/ui";
 import styles from "./hero.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
     const [scrollIndicatorHidden, setScrollIndicatorHidden] = useState(false);
